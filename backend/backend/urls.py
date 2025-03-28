@@ -22,7 +22,7 @@ from server.views import *
 
 
 router = DefaultRouter()
-router.register("api/server/select/", ServerListView)
+router.register("api/server/select", ServerListView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
