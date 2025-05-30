@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material";
+import { createTheme, responsiveFontSizes } from "@mui/material";
 
 
 declare module "@mui/material/styles" {
@@ -16,6 +16,11 @@ declare module "@mui/material/styles" {
 
 export const createMuiTheme = () => {
     let theme  = createTheme({
+        typography: {
+            fontFamily:['IBM Plex Sans', 'sans-serif'].join(','),
+            h6: {
+                height: 50,  }
+        },
         primaryAppBar: {
             height: 50,
         },
@@ -29,6 +34,7 @@ export const createMuiTheme = () => {
             }
         }
     })
+    theme = responsiveFontSizes(theme);
     return theme;
 }
 
